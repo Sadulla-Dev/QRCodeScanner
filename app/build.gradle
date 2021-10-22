@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -46,4 +47,11 @@ dependencies {
 
     //QR Code Library
     implementation 'me.dm7.barcodescanner:zbar:1.9.13'
+
+
+    //Room DB Library
+    def room_version = "2.1.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
 }

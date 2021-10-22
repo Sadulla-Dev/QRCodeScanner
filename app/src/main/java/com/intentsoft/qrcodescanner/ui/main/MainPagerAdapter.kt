@@ -1,4 +1,4 @@
-package com.intentsoft.qrcodescanner.adapter
+package com.intentsoft.qrcodescanner.ui.main
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

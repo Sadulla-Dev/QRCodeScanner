@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.intentsoft.qrcodescanner.R
-import com.intentsoft.qrcodescanner.adapter.MainPagerAdapter
+import com.intentsoft.qrcodescanner.db.database.QrResultDataBase
+import com.intentsoft.qrcodescanner.db.entitles.QrResult
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         setViewPagerAdapter()
         setBottomNavigation()
         setViewPagerListener()
+
+        var qrResult = QrResult(result = "Dummy text",resultType = "TEXT",favourite = false,calendar = Calendar.getInstance())
+        QrResultDataBase.getAppDatabase(this)?.getQrDao()?.insertQrResult(qrResult)
     }
 
     private fun setBottomNavigation() {

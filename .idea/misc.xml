@@ -10,6 +10,8 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3734375" />
         <entry key="app/src/main/res/layout/fragment_scanner.xml" value="0.359375" />
         <entry key="app/src/main/res/layout/fragment_scanner_history.xml" value="0.3734375" />
+        <entry key="app/src/main/res/layout/layout_header_history.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/layout_qr_reslut_show.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/menu/menu_bottomnavigation.xml" value="0.3734375" />
       </map>
     </option>
