@@ -1,18 +1,21 @@
 package com.intentsoft.qrcodescanner.ui.fragment
 
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import com.intentsoft.qrcodescanner.R
 import com.intentsoft.qrcodescanner.db.DbHelper
 import com.intentsoft.qrcodescanner.db.DbHelperI
 import com.intentsoft.qrcodescanner.db.database.QrResultDataBase
 import com.intentsoft.qrcodescanner.ui.dialog.QrCodeResultDialog
+import kotlinx.android.synthetic.main.fragment_scanner.*
 import kotlinx.android.synthetic.main.fragment_scanner.view.*
 import me.dm7.barcodescanner.zbar.Result
 import me.dm7.barcodescanner.zbar.ZBarScannerView
@@ -32,12 +35,17 @@ class QRScannerFragment : Fragment(), ZBarScannerView.ResultHandler {
     lateinit var scannerView: ZBarScannerView
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         mView = inflater.inflate(R.layout.fragment_scanner, container, false)
         onClicks()
         initView()
         init()
         return mView.rootView
+
     }
 
     private fun init() {
@@ -52,7 +60,7 @@ class QRScannerFragment : Fragment(), ZBarScannerView.ResultHandler {
 
     private fun setResultDialog() {
         resultDialog = QrCodeResultDialog(context!!)
-        resultDialog.setOnDismissListener(object : QrCodeResultDialog.OnDismissListener{
+        resultDialog.setOnDismissListener(object : QrCodeResultDialog.OnDismissListener {
             override fun onDismiss() {
                 scannerView.resumeCameraPreview(this@QRScannerFragment)
             }

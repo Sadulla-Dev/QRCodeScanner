@@ -8,6 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="DayDarkAppTheme" parent="ThemeOverlay.MaterialComponents.Dark">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#081C2C</item>
+        <item name="colorPrimaryDark">#18191B</item>
+        <item name="colorAccent">#0F2527</item>
+    </style>
+    <style name="DayNightAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="BottomMenuActiveItem" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="itemTextColor">@color/white</item>
         <item name="itemIconTint">@color/white</item>

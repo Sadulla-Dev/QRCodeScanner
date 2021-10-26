@@ -39,5 +39,4 @@ interface QrResultDao {
     @Query("SELECT * FROM QrResult WHERE result = :result ")
     fun checkIfQrResultExist(result: String): Int
 
-
 }

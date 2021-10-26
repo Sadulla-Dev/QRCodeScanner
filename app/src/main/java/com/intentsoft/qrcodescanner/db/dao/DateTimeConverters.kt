@@ -11,7 +11,6 @@ class DateTimeConverters {
         return c
     }
 
-    @TypeConverter
     fun fromCalendar(c: Calendar?): Long? {
         return c?.time?.time
     }

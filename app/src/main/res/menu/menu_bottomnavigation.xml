@@ -7,6 +7,7 @@
         android:icon="@drawable/ic_qr_code"
         />
 
+
     <item android:id="@+id/scannedResultMenuId"
         android:title="@string/recent_scanned"
         android:icon="@drawable/ic_history_blue_24dp"
@@ -16,4 +17,5 @@
         android:title="@string/favourites"
         android:icon="@drawable/ic_star_border_white_24dp"
         />
+
 </menu>

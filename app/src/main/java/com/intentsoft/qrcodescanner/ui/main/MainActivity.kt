@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         setBottomNavigation()
         setViewPagerListener()
 
+
+
         var qrResult = QrResult(result = "Dummy text",resultType = "TEXT",favourite = false,calendar = Calendar.getInstance())
         QrResultDataBase.getAppDatabase(this)?.getQrDao()?.insertQrResult(qrResult)
     }
@@ -49,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                     0 -> {
                         bottomNavigationView.selectedItemId = R.id.qrScanMenuId
                     }
-                    1 -> {
+                    1-> {
                         bottomNavigationView.selectedItemId = R.id.scannedResultMenuId
                     }
                     2 -> {
